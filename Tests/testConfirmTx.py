@@ -15,20 +15,23 @@ satValue = 50000000;
 
 
 #Test suite for the confirmTx script
+####################################
 # def testConfirmTx():
-
-
 
 #Monitors the blockchain.info websocket for incoming Txs
 #at @param btc_addr.
+#Test uses the testnet
 # def testMonitorSocket():
+    # assert monitorSocket(btc_addr,satValue,socket=)
+
+
 
 
 
 #Continually retrieves the websocket data
 #@returns dictionary that represents a bitcoin transaction
 # def testGetSocketData():
-
+#DEPRECATED LOL
 
 
 
@@ -50,4 +53,11 @@ def testContainsOutputMulti():
 
 
 #Confirm that there is a tx fee greater than a threshold
-# def testTxFeeCheck():
+def testTxFeeCheck():
+    resultTx = json.loads(singleTxData)["x"]
+    assert confirmTx.TxFeeCheck(resultTx) == 50000;
+
+
+def testTxFeeCheckMulti():
+    resultTx = json.loads(multiTxData)["x"]
+    assert confirmTx.TxFeeCheck(resultTx) == 50000;

@@ -34,19 +34,26 @@ def confirmTx(randValue,btc_addr):
 #Monitors the blockchain.info websocket for incoming Txs
 #at @param btc_addr.
 
-def monitorSocket(btc_addr, satValue):
+def monitorSocket(btc_addr, satValue, socket="wss://ws.blockchain.info/inv"):
+    ws = create_connection(socket)
+    ws.send(json.dumps({"op":"addr_sub", "addr":btc_addr}))
     while True:
-        result = getSocketData(btc_addr)
-        if result != null:
-            if containsOutput(result["out"],btc_addr,satValue):
-                return result
+        result =  ws.recv()
+        if newData != null:
+            try:
+                newData = json.loads(result)["x"]
+                if containsOutput(newData["out"],btc_addr,satValue):
+                    ws.close()
+                    return newData
+            except IndexError:
+                return {}
 
-
-
+#DEPRECATED LOL
+#Combined into monitorSocket method
 #Continually retrieves the websocket data
 #@returns dictionary that represents a bitcoin transaction
-def getSocketData(btc_addr):
-    ws = create_connection("wss://ws.blockchain.info/inv")
+def getSocketData(btc_addr, socket="wss://ws.blockchain.info/inv"):
+    ws = create_connection(socket)
     ws.send(json.dumps({"op":"addr_sub", "addr":btc_addr}))
     result =  ws.recv()
     ws.close()
