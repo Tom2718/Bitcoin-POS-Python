@@ -61,11 +61,10 @@ def getSocketData(btc_addr):
 #@param satValue the satoshi value of the purchase
 #@returns boolean
 def containsOutput(outputs,btc_addr,satValue):
-    for out in outs:
+    for out in outputs:
         if satValue-1<=out["value"]<=satValue+1 and out["addr"]==btc_addr:
             return True
-        else:
-            return False
+    return False
 
 
 
