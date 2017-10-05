@@ -11,7 +11,7 @@
         "tx_index" : 288356926,
         "type" : 0,
         "addr" : "37xnUmg34jNaA9sBRFiEiLTZjNQKFRSRCF",
-        "value" : 6000000,
+        "value" : 35000000,
         "n" : 0,
         "script" : "a91444cc2ff35c8c161e9247c9d4029a7822d40f81b187"
       },
@@ -23,7 +23,7 @@
         "tx_index" : 288548178,
         "type" : 0,
         "addr" : "35NGMkxEZrhBp2awh7RCfFYFsXhREFReJC",
-        "value" : 234147603,
+        "value" : 35050000,
         "n" : 0,
         "script" : "a9142854a63d66c70090d5481fe6ceeff880563bf30187"
       },
@@ -39,8 +39,8 @@
       "spent" : false,
       "tx_index" : 288567157,
       "type" : 0,
-      "addr" : "3BTN4ZPKZnGJEGSVe9zPe4bTn8Qh39jkbd",
-      "value" : 237767152,
+      "addr" : "1CGVT1BTV6Q2wpSm1R2vp8L4nCPgq4BuCQ",
+      "value" : 50000000,
       "n" : 0,
       "script" : "a9146b1c3eb14df5b645a8dcb9e55311022138c4045987"
     }, {
@@ -48,7 +48,7 @@
       "tx_index" : 288567157,
       "type" : 0,
       "addr" : "1wsb7SPzHSSco3HasrfuA3cT4ab1VXggf",
-      "value" : 2310000,
+      "value" : 20000000,
       "n" : 1,
       "script" : "76a9140a60b0d681ad43fa13ecb3eb17e1b28c1a4f667d88ac"
     } ]

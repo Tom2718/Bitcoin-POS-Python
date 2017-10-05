@@ -11,7 +11,7 @@
         "tx_index" : 288567063,
         "type" : 0,
         "addr" : "1CtZQfWwZWnrBJRvR8Zg9Xm5Q8dtmb15KM",
-        "value" : 23160264,
+        "value" : 50000000,
         "n" : 1,
         "script" : "76a9148269a687d0cdb9c884f8dcc07b6a1b496bbf09a688ac"
       },
@@ -27,8 +27,8 @@
       "spent" : false,
       "tx_index" : 288567403,
       "type" : 0,
-      "addr" : "1NCqDETyJGgC1VA3z8u6294xr17BURBMzX",
-      "value" : 23131110,
+      "addr" : "1CGVT1BTV6Q2wpSm1R2vp8L4nCPgq4BuCQ",
+      "value" : 49950000,
       "n" : 0,
       "script" : "76a914e8977622f68bf95f30d15893764ae39941ccefb088ac"
     } ]
